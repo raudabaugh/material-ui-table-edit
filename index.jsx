@@ -1,10 +1,9 @@
+import { TextField, Toggle, DatePicker, Button, IconButton } from '@material-ui/core'
+import Check from '@material-ui/icons/Check'
+import ModeEdit from '@material-ui/icons/ModeEdit'
+import Delete from '@material-ui/icons/Delete'
 const React = require('react')
-const mui = require('material-ui')
-const ModeEdit = require('material-ui/svg-icons/editor/mode-edit').default
-const Check = require('material-ui/svg-icons/navigation/check').default
-const Delete = require('material-ui/svg-icons/action/delete').default
 const times = require('lodash.times')
-const {IconButton, Toggle, TextField, RaisedButton, DatePicker} = mui
 const PropTypes = require('prop-types')
 const createReactClass = require('create-react-class')
 const injectTapEventPlugin = require('react-tap-event-plugin')
@@ -310,7 +309,8 @@ module.exports = createReactClass({
           row.id = id
           return this.renderRow(row)
         })}
-        <RaisedButton
+        <Button
+          variant='contained'
           onClick={onButtonClick}
           style={buttonStyle}
           label='Add Row'
